@@ -70,3 +70,6 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(5)
         self.assertEqual(str(self.varasto), "saldo = 5, vielä tilaa 5")
 
+    def test_fail(self):
+        self.assertEqual(True, False)
+
