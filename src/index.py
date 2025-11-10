@@ -54,5 +54,22 @@ def main():
     print(f"Mehuvarasto: {mehua}")
 
 
+def riko_pylint(arg1, arg2, arg3, arg4, arg5, arg6):
+    tosia = 0
+    if arg1:
+        tosia += 1
+        if arg2:
+            tosia += 1
+            if arg3:
+                tosia += 1
+                if arg4:
+                    tosia += 1
+                    if arg5:
+                        tosia += 1
+    if tosia >= 5:
+        return True == True == True == True == True == True == True == True == True
+    return False
+
+
 if __name__ == "__main__":
     main()
