@@ -1,19 +1,16 @@
 from varasto import Varasto
 
+mehua = Varasto(100.0)
+olutta = Varasto(100.0, 20.2)
 
-def main():
-    mehua = Varasto(100.0)
-    olutta = Varasto(100.0, 20.2)
-
-    print("Luonnin jälkeen:")
-    print(f"Mehuvarasto: {mehua}")
-    print(f"Olutvarasto: {olutta}")
-
+def getterit():
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
 
+
+def setterit():
     print("Mehu setterit:")
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
@@ -22,6 +19,8 @@ def main():
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
+
+def virhetilanteet():
     print("Virhetilanteita:")
     print("Varasto(-100.0);")
     huono = Varasto(-100.0)
@@ -31,6 +30,8 @@ def main():
     huono = Varasto(100.0, -50.7)
     print(huono)
 
+
+def lisays():
     print(f"Olutvarasto: {olutta}")
     print("olutta.lisaa_varastoon(1000.0)")
     olutta.lisaa_varastoon(1000.0)
@@ -41,6 +42,8 @@ def main():
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
 
+
+def otto():
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
@@ -54,21 +57,16 @@ def main():
     print(f"Mehuvarasto: {mehua}")
 
 
-def riko_pylint(arg1, arg2, arg3, arg4, arg5, arg6):
-    tosia = 0
-    if arg1:
-        tosia += 1
-        if arg2:
-            tosia += 1
-            if arg3:
-                tosia += 1
-                if arg4:
-                    tosia += 1
-                    if arg5:
-                        tosia += 1
-    if tosia >= 5:
-        return True == True == True == True == True == True == True == True == True
-    return False
+def main():
+    print("Luonnin jälkeen:")
+    print(f"Mehuvarasto: {mehua}")
+    print(f"Olutvarasto: {olutta}")
+
+    getterit()
+    setterit()
+    virhetilanteet()
+    lisays()
+    otto()
 
 
 if __name__ == "__main__":
